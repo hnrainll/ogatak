@@ -3,3 +3,4 @@ electron_zipped/*
 update_my_installation.py
 .DS_Store
 node_modules/
+.idea/

@@ -6,7 +6,6 @@
 	"license": "AGPL-3.0",
 	"main": "prestart.js",
 	"scripts": {
-		"install-electron": "npm install electron --save-dev",
 		"start": "electron ."
 	},
 	"repository": {

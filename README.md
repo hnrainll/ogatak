@@ -1,46 +1,46 @@
 ![Screenshot](https://user-images.githubusercontent.com/16438795/239653023-369442f4-e35f-4dc7-98f4-5cf7a266c2f9.png)
 
-* Simple analysis GUI for [KataGo](https://github.com/lightvector/KataGo). See [Releases](https://github.com/rooklift/ogatak/releases) for the latest version.
-* Stone and board graphics modified from [Sabaki](https://github.com/SabakiHQ/Sabaki), with thanks.
-* Concept borrowed from [Lizzie](https://github.com/featurecat/lizzie), with influence from [KaTrain](https://github.com/sanderland/katrain), [CGoban](https://www.gokgs.com/download.jsp), and [LizGoban](https://github.com/kaorahi/lizgoban).
-* Original, independent codebase.
+* 简单的 [KataGo](https://github.com/lightvector/KataGo) 分析GUI界面。请查看 [Releases](https://github.com/rooklift/ogatak/releases) 获取最新版本。
+* 棋子和棋盘图形修改自 [Sabaki](https://github.com/SabakiHQ/Sabaki)，在此表示感谢。
+* 概念借鉴自 [Lizzie](https://github.com/featurecat/lizzie)，受到 [KaTrain](https://github.com/sanderland/katrain)、[CGoban](https://www.gokgs.com/download.jsp) 和 [LizGoban](https://github.com/kaorahi/lizgoban) 的影响。
+* 原创、独立的代码库。
 
-## Upsides
+## 优点
 
-* Relatively simple once set up.
-* I personally like the aesthetics...
-* Has most normal Lizzie-ish features.
-* Fully-functional SGF editor.
-* Correctly handles many SGF files that trouble other GUIs, especially handicaps and mid-game board edits.
-* Can load NGF, GIB, and UGI files (albeit imperfectly).
-* No dependencies except Electron, quite easy to run from source, doesn't pull in a zillion npm modules.
+* 一旦设置完成，使用相对简单。
+* 我个人喜欢这种美学设计...
+* 具有大部分正常的Lizzie风格功能。
+* 功能完善的SGF编辑器。
+* 正确处理许多其他GUI难以处理的SGF文件，特别是让子和中盘棋盘编辑。
+* 可以加载NGF、GIB和UGI文件（尽管不完美）。
+* 除了Electron之外没有依赖，从源代码运行相当容易，不会引入大量的npm模块。
 
-## Downsides
+## 缺点
 
-* KataGo not included, setup takes at least a minute's effort.
-* Electron-based app, everyone hates these (they're big).
+* 不包含KataGo，设置需要至少一分钟的工作。
+* 基于Electron的应用程序，每个人都讨厌这些（它们很大）。
 
-## Setup
+## 设置
 
-* Download and unpack Ogatak, KataGo, and a KataGo weights file.
-* In Ogatak, select the menu item `Setup` `-->` `Locate KataGo...` (and locate katago.exe)
-* In Ogatak, select the menu item `Setup` `-->` `Choose network...` (and locate the weights file) 
+* 下载并解压Ogatak、KataGo和KataGo权重文件。
+* 在Ogatak中，选择菜单项 `Setup` `-->` `Locate KataGo...`（并找到katago.exe）
+* 在Ogatak中，选择菜单项 `Setup` `-->` `Choose network...`（并找到权重文件） 
 
-## Performance tips
+## 性能提示
 
-* The setting to request per-move ownership info from KataGo (see `Analysis` menu) is rather demanding and you should turn it off if you experience any lag.
-* Alternatively, consider changing the engine report rate (see `Setup` menu) from the default 0.1 (which is the most intense) to something else.
-* Due to a complex interaction between KataGo's algorithm and KataGo's cache, the `wide root noise` setting can cause a reduction in perceived performance if you use the GUI in a certain way, especially if you commonly click through the top move. It may also affect whole-file analysis speeds.
+* 要求KataGo提供每步归属信息的设置（参见`Analysis`菜单）相当苛刻，如果您遇到任何延迟，应该关闭它。
+* 或者，考虑更改引擎报告率（参见`Setup`菜单），从默认的0.1（最密集）改为其他值。
+* 由于KataGo算法和KataGo缓存之间复杂的交互，如果您以某种方式使用GUI，特别是如果您经常点击最佳移动，`wide root noise`设置可能会导致感知性能下降。它也可能影响整个文件分析速度。
 
-## About the analysis config file
+## 关于分析配置文件
 
-* KataGo requires an analysis config file. Such a file is provided with KataGo as `analysis_example.cfg`, and Ogatak will use this if it's present, unless you explicitly specify a different file. You might find that changing some settings therein leads to better (or worse) performance. Some have found [these settings](https://github.com/sanderland/katrain/blob/master/katrain/KataGo/analysis_config.cfg) chosen by the KaTrain author to be a bit faster.
+* KataGo需要一个分析配置文件。KataGo提供了这样的文件作为`analysis_example.cfg`，如果存在，Ogatak将使用这个文件，除非您明确指定了不同的文件。您可能会发现更改其中的一些设置会带来更好（或更差）的性能。一些人发现KaTrain作者选择的[这些设置](https://github.com/sanderland/katrain/blob/master/katrain/KataGo/analysis_config.cfg)会快一些。
 
-## Translations
+## 翻译
 
-* At the moment, it is possible to translate most of the menu items and some of the GUI text. See `src/modules/translations.js` for instructions.
-* Thanks to the following translators: ParmuzinAlexander, CGLemon, Bandysol.
+* 目前，可以翻译大部分菜单项和一些GUI文本。请参见`src/modules/translations.js`获取说明。
+* 感谢以下翻译者：ParmuzinAlexander、CGLemon、Bandysol。
 
-## Talk to me
+## 联系我
 
-* I can often be found on the [Computer Go Discord](https://discord.com/invite/5vacH5F).
+* 您经常可以在[计算机围棋 Discord](https://discord.com/invite/5vacH5F)上找到我。

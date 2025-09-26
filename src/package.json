@@ -5,6 +5,10 @@
 	"description": "KataGo interface",
 	"license": "AGPL-3.0",
 	"main": "prestart.js",
+	"scripts": {
+		"install-electron": "npm install electron --save-dev",
+		"start": "electron ."
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/rooklift/ogatak"
@@ -21,5 +25,8 @@
 			"signAndEditExecutable": false,
 			"target": "zip"
 		}
+	},
+	"devDependencies": {
+		"electron": "^38.1.2"
 	}
 }
